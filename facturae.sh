@@ -1,6 +1,6 @@
 #!/bin/bash
 
-read -p "Por favor, introduce la versión de Odoo para instlar facturae(por ejemplo, 15): " version
+read -p "Por favor, introduce la versión de Odoo para instalar facturae(por ejemplo, 15): " version
 
 if [[ -z "$version" ]]; then
     echo "Debe ingresar una versión de Odoo."
