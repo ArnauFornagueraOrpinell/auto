@@ -26,4 +26,4 @@ odoo_venv="/opt/odoo$version-venv"
 
 systemctl restart odoo$version
 
-echo "Se ha instalado Document Management System exitosamente."
+echo "INSTALACIÓN DE DMS COMPLETADA CORRECTAMENTE!"
