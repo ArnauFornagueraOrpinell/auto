@@ -35,7 +35,7 @@ mv account-financial-reporting/account_tax_balance .
 git clone https://github.com/OCA/server-ux.git --branch $odoo_version
 mv server-ux/date_range .
 
-odoo_venv="/opt/odoo$version-venv"
+odoo_venv="/opt/odoo/odoo$version-venv"
 
 source $odoo_venv/bin/activate
 pip install unidecode
@@ -45,3 +45,5 @@ pip install xmlsig
 deactivate
 
 systemctl restart odoo$version
+
+echo "INSTALACIÓN DE FACTURAE COMPLETADA CORRECTAMENTE"
