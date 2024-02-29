@@ -46,7 +46,7 @@ source $odoo_venv/bin/activate
 pip install unidecode
 pip install pycountry
 pip install xmlsig
-
+pip install pyOpenSSL
 deactivate
 
 systemctl restart odoo$version
