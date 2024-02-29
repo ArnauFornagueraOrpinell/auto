@@ -9,6 +9,8 @@ fi
 
 odoo_version="$version.0"
 
+cd /opt/odoo/odoo$version-custom-addons
+
 git clone https://github.com/OCA/l10n-spain.git --branch $odoo_version
 mv l10n-spain/account_payment_partner .
 mv l10n-spain/l10n_es_partner .
