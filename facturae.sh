@@ -11,6 +11,18 @@ odoo_version="$version.0"
 
 cd /opt/odoo/odoo$version-custom-addons
 
+rm -rf l10n_es_partner
+rm -rf l10n_es_facturae
+rm -rf l10n_es_aeat
+rm -rf base_iso3166
+rm -rf base_bank_from_iban
+rm -rf report_qweb_parameter
+rm -rf report_xml
+rm -rf account_payment_partner
+rm -rf account_payment_mode
+rm -rf account_tax_balance 
+rm -rf date_range
+
 git clone https://github.com/OCA/l10n-spain.git --branch $odoo_version
 mv l10n-spain/l10n_es_partner .
 mv l10n-spain/l10n_es_facturae .
@@ -24,7 +36,7 @@ rm -rf community-data-files
 
 git clone https://github.com/OCA/reporting-engine.git --branch $odoo_version
 mv reporting-engine/report_qweb_parameter .
-mv reporting-engine/report_xml/ .
+mv reporting-engine/report_xml .
 rm -rf reporting-engine
 
 git clone https://github.com/OCA/bank-payment.git --branch $odoo_version
