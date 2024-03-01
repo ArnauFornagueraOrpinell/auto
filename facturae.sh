@@ -1,6 +1,7 @@
 #!/bin/bash
 
 read -p "Por favor, introduce la versión de Odoo para instalar facturae(por ejemplo, 15): " version
+read -p "Quiere la version arreglada de facturae? (s/n): " fixed
 
 if [[ -z "$version" ]]; then
     echo "Debe ingresar una versión de Odoo."
@@ -28,6 +29,11 @@ mv l10n-spain/l10n_es_partner .
 mv l10n-spain/l10n_es_facturae .
 mv l10n-spain/l10n_es_aeat .
 rm -rf l10n-spain
+
+if [ "$fixed" == "s" ]; then
+    rm -rf l10n_es_facturae/data/account_tax_template.xml
+    mv ~/auto/fixes/account_tax_template.xml ./l10n_es_facturae/data/
+fi
 
 git clone https://github.com/OCA/community-data-files.git --branch $odoo_version
 mv community-data-files/base_iso3166 .
