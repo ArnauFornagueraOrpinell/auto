@@ -9,15 +9,18 @@ fi
 
 odoo_version="$version.0"
 
+rm -rf dms
 git clone https://github.com/OCA/dms.git --branch $odoo_version
 mv dms a
 mv a/dms .
 rm -rf a
 
+rm -rf web_drop_target
 git clone https://github.com/OCA/web.git --branch $odoo_version
 mv web/web_drop_target .
 rm -rf web
 
+rm -rf mail_preview_base
 git clone https://github.com/Nitrokey/odoo-social.git --branch $odoo_version
 mv odoo-social/mail_preview_base .
 rm -rf odoo-social
