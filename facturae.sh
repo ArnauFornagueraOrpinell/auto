@@ -24,7 +24,7 @@ rm -rf account_payment_mode
 rm -rf account_tax_balance 
 rm -rf date_range
 
-git clone https://github.com/OCA/l10n-spain.git --branch $odoo_version
+git clone https://github.com/OCA/l10n-spain.git --branch $odoo_version --depth 1
 mv l10n-spain/l10n_es_partner .
 mv l10n-spain/l10n_es_facturae .
 mv l10n-spain/l10n_es_aeat .
@@ -35,26 +35,26 @@ if [ "$fixed" == "s" ]; then
     mv ~/auto/fixes/account_tax_template.xml ./l10n_es_facturae/data/
 fi
 
-git clone https://github.com/OCA/community-data-files.git --branch $odoo_version
+git clone https://github.com/OCA/community-data-files.git --branch $odoo_version --depth 1
 mv community-data-files/base_iso3166 .
 mv community-data-files/base_bank_from_iban .
 rm -rf community-data-files
 
-git clone https://github.com/OCA/reporting-engine.git --branch $odoo_version
+git clone https://github.com/OCA/reporting-engine.git --branch $odoo_version --depth 1
 mv reporting-engine/report_qweb_parameter .
 mv reporting-engine/report_xml .
 rm -rf reporting-engine
 
-git clone https://github.com/OCA/bank-payment.git --branch $odoo_version
+git clone https://github.com/OCA/bank-payment.git --branch $odoo_version --depth 1
 mv bank-payment/account_payment_partner .
 mv bank-payment/account_payment_mode .
 rm -rf bank-payment
 
-git clone https://github.com/OCA/account-financial-reporting.git --branch $odoo_version
+git clone https://github.com/OCA/account-financial-reporting.git --branch $odoo_version --depth 1
 mv account-financial-reporting/account_tax_balance .
 rm -rf account-financial-reporting
 
-git clone https://github.com/OCA/server-ux.git --branch $odoo_version
+git clone https://github.com/OCA/server-ux.git --branch $odoo_version --depth 1
 mv server-ux/date_range .
 rm -rf server-ux
 
